@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS</title>
+    <meta charset='utf-8'>
+    <meta name="description" content="AngularJS and Angular Code Example">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/Scripts/app/main.js"></script>
+</head>
+<body ng-app="demo" ng-controller="DemoCtrl">
+    <div class="container" width="800px" id="invoice">
+        <div class="row">
+            <div class="col-xs-12 heading">
+                Dynamic Grid in Angular JS
+            </div>
+        </div>
+        <div class="items-table">
+            <div class="row header">
+                <div class="col-xs-1">&nbsp;</div>
+                <div class="col-xs-5">Title 1</div>
+                <div class="col-xs-2">Title 2</div>
+                <div class="col-xs-2">Title 3</div>
+            </div>
+            <div class="row invoice-item" ng-repeat="item in invoice.items" ng-animate="'slide-down'">
+                <div class="col-xs-1 remove-item-container">
+                    <a href ng-click="removeItem(item)" class="btn btn-danger"><i class="fa fa-times"></i></a>
+                </div>
+                <div class="col-xs-5 input-container">
+                    <input ng-model="item.description" placeholder="Description" />
+                </div>
+                <div class="col-xs-2 input-container">
+                    <input ng-model="item.qty" value="1" size="4" ng-required ng-validate="integer" placeholder="Quantity" />
+                </div>
+                <div class="col-xs-2 input-container">
+                    <input ng-model="item.cost" value="0.00" ng-required ng-validate="number" size="6" placeholder="Cost" />
+                </div>
+            </div>
+            <div class="row invoice-item">
+                <div class="col-xs-12 add-item-container">
+                    <a class="btn btn-primary" href ng-click="addItem()"><i class="fa fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

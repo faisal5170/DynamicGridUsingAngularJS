@@ -1,0 +1,73 @@
+.items-table .row {
+  border-bottom:1px solid #ddd;
+  line-height:3em;
+}
+.items-table .row:last-child {
+  border-bottom:none;
+  line-height:3em;
+}
+
+.items-table .row:nth-child(even) {
+  background:#f9f9f9;
+}
+.items-table input {
+  line-height:1.5em;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.heading {
+  background-color:#357EBD;
+  color:#FFF;
+  margin-bottom:1em;
+  text-align:center;
+  line-height:2.5em;
+}
+.right input {
+  text-align:right;
+}
+.input-container {
+  padding:3px 0;
+}
+
+.header.row {
+  font-weight:bold;
+  border-bottom:1px solid #ddd;
+  border-top:1px solid #ddd;
+}
+
+input, textarea{
+  border: 1px solid #FFF;
+}
+
+.container input:hover, .container textarea:hover,
+.table-striped > tbody > tr:nth-child(2n+1) > td input:hover,
+.container input:focus, .container textarea:focus,
+.table-striped > tbody > tr:nth-child(2n+1) > td input:focus{
+  border: 1px solid #CCC;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td input{
+    background-color: #F9F9F9;
+    border: 1px solid #F9F9F9;
+}
+
+body{
+  padding:20px;
+}
+
+.infos input{
+  width: 300px;
+}
+
+.align-right input{
+  text-align:right;
+  width: 300px;
+}
+
+div.container{
+  width: 800px;
+}
+
